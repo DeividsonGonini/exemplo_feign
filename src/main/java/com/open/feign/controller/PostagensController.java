@@ -23,6 +23,7 @@ public class PostagensController {
         return postagensClient.getAllPosts();
     }
 
+    //Retorna apenas com os ids Pares
     @GetMapping("post_par")
     public List<PostagensFeignRequest> getPostsPares() {
 
@@ -36,7 +37,7 @@ public class PostagensController {
         return postagensPar;
     }
 
-    //filtroando os ids começados com 1
+    //Retorna apenas com os ids começados com 1
     @GetMapping("posts/id_alterado")
     public List<PostagensFeignRequest> getAlteraId() {
         List<PostagensFeignRequest> postagens = postagensClient.getAllPosts();
